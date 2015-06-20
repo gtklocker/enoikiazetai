@@ -40,6 +40,8 @@ if __name__ == '__main__':
                 coordinates = get_coordinates(street)
 
                 features.append(geojson.Feature(geometry=coordinates, properties={'ad': ad}))
+            else:
+                features.append(geojson.Feature(geometry=geojson.Point((20.887282, 39.664420)), properties={'ad': ad}))
 
         offset += 1
 
